@@ -7,11 +7,11 @@ const errorHandler = require('../handleErorrs/500')
 
 const app = express();
 
-app.get('/', (req, res) => {
-    res.status(200).sernd('hello')
+app.get("/", (req, res) => {
+    res.status(200).send('hello')
 })
 
-app.get('/data', (req, res) => {
+app.get("/data", (req, res) => {
     res.json({
         id: 1,
         name: 'Wajeeh',
@@ -19,7 +19,7 @@ app.get('/data', (req, res) => {
     });
 });
 
-app.get('/test', stamp, (req, res) => {
+app.get("/test", stamp, (req, res) => {
     res.json({
         id: 2,
         name: 'Issam',
@@ -28,7 +28,7 @@ app.get('/test', stamp, (req, res) => {
     })
 })
 
-app.get('/bad', (req, res) => {
+app.get("/bad", (req, res) => {
     let num = 10;
     let result = num.forEach((x) => {
         console.log(x);
